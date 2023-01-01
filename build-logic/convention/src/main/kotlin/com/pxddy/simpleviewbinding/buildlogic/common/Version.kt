@@ -7,9 +7,9 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 object Version {
 
     object Release {
-        private const val major = 0
+        private const val major = 1
         private const val minor = 0
-        private const val patch = 1
+        private const val patch = 0
 
         const val versionCode = (major * 10000) + (minor * 100) + (patch * 1)
         const val versionName = "$major.$minor$patch"
