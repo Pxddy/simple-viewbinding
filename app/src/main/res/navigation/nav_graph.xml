@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/mainFragment">
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.pxddy.simpleviewbinding.demo.main.MainFragment"
+        android:label="MainFragment">
+        <action
+            android:id="@+id/action_mainFragment_to_counterFragment"
+            app:destination="@id/counterFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_counterDialogFragment"
+            app:destination="@id/counterDialogFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_counterActivity"
+            app:destination="@id/counterActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/counterFragment"
+        android:name="com.pxddy.simpleviewbinding.demo.fragment.CounterFragment"
+        android:label="CounterFragment" />
+    <dialog
+        android:id="@+id/counterDialogFragment"
+        android:name="com.pxddy.simpleviewbinding.demo.dialogfragment.CounterDialogFragment"
+        android:label="CounterDialogFragment" />
+    <activity
+        android:id="@+id/counterActivity"
+        android:name="com.pxddy.simpleviewbinding.demo.activity.CounterActivity"
+        android:label="CounterActivity" />
+</navigation>

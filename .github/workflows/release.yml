@@ -1,0 +1,17 @@
+name: Tagged releases
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release-github:
+    name: Create GitHub release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Project Checkout
+        uses: actions/checkout@v3
+
+      - name: Release
+        uses: softprops/action-gh-release@v1
