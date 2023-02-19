@@ -1,5 +1,4 @@
 import com.android.build.api.dsl.LibraryExtension
-import com.pxddy.simpleviewbinding.buildlogic.common.Version
 import com.pxddy.simpleviewbinding.buildlogic.configureJava
 import com.pxddy.simpleviewbinding.buildlogic.configureKotlinAndroid
 import org.gradle.api.Plugin
@@ -16,7 +15,6 @@ class AndroidLibraryConventionPlugin : Plugin<Project> {
 
             extensions.configure<LibraryExtension> {
                 configureKotlinAndroid(this)
-                defaultConfig.targetSdk = Version.Sdk.target
             }
 
             configureJava()
