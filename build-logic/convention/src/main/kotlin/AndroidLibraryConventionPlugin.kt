@@ -1,5 +1,5 @@
 import com.android.build.api.dsl.LibraryExtension
-import com.pxddy.simpleviewbinding.buildlogic.configureJava
+import com.pxddy.simpleviewbinding.buildlogic.configureJvmToolchain
 import com.pxddy.simpleviewbinding.buildlogic.configureKotlinAndroid
 import org.gradle.api.Plugin
 import org.gradle.api.Project
@@ -17,7 +17,7 @@ class AndroidLibraryConventionPlugin : Plugin<Project> {
                 configureKotlinAndroid(this)
             }
 
-            configureJava()
+            configureJvmToolchain()
         }
     }
 }
