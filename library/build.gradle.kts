@@ -3,6 +3,8 @@ plugins {
     id("maven-publish")
 }
 
+private val variantNameRelease = "release"
+
 android {
     namespace = "com.pxddy.simpleviewbinding"
 
@@ -23,6 +25,10 @@ android {
 
     buildFeatures {
         viewBinding = true
+    }
+
+    publishing {
+        singleVariant(variantNameRelease)
     }
 }
 
@@ -46,9 +52,9 @@ dependencies {
 
 publishing {
     publications {
-        register<MavenPublication>("release") {
+        register<MavenPublication>(variantNameRelease) {
             afterEvaluate {
-                from(components["release"])
+                from(components[variantNameRelease])
             }
         }
     }
