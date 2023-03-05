@@ -110,6 +110,8 @@ allprojects {
 
 ### 2. Add the dependency
 
+[![](https://jitpack.io/v/Pxddy/simple-viewbinding.svg)](https://jitpack.io/#Pxddy/simple-viewbinding)
+
 ```kotlin
 dependencies {
     implementation("com.github.Pxddy:simple-viewbinding:v1.0.0")
