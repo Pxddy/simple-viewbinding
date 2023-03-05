@@ -122,4 +122,4 @@ https://developer.android.com/topic/libraries/view-binding#setup
 
 ## License
 
-See the LICENSE file for license rights and limitations.
+See the [LICENSE](LICENSE) file for license rights and limitations.
