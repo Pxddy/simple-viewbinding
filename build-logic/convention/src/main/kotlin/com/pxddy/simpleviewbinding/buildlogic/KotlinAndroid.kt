@@ -3,8 +3,8 @@ package com.pxddy.simpleviewbinding.buildlogic
 import com.android.build.api.dsl.CommonExtension
 import com.pxddy.simpleviewbinding.buildlogic.common.Version
 import org.gradle.api.Project
-import org.gradle.api.plugins.ExtensionAware
-import org.jetbrains.kotlin.gradle.dsl.KotlinJvmOptions
+import org.gradle.kotlin.dsl.withType
+import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 internal fun Project.configureKotlinAndroid(
     commonExtension: CommonExtension<*, *, *, *>,
@@ -22,20 +22,18 @@ internal fun Project.configureKotlinAndroid(
 
         }
 
-        kotlinOptions {
-            options.jvmTarget.set(Version.Java.jvmTarget)
+        tasks.withType<KotlinCompile>().configureEach {
+            kotlinOptions {
+                jvmTarget = Version.Java.version.toString()
 
-            freeCompilerArgs = freeCompilerArgs + listOf(
-                "-opt-in=kotlinx.coroutines.ExperimentalCoroutinesApi",
-                "-opt-in=kotlinx.coroutines.FlowPreview",
-                "-opt-in=kotlin.time.ExperimentalTime",
-                "-opt-in=kotlin.RequiresOptIn",
-                "-opt-in=kotlin.ExperimentalStdlibApi"
-            )
+                freeCompilerArgs = freeCompilerArgs + listOf(
+                    "-opt-in=kotlinx.coroutines.ExperimentalCoroutinesApi",
+                    "-opt-in=kotlinx.coroutines.FlowPreview",
+                    "-opt-in=kotlin.time.ExperimentalTime",
+                    "-opt-in=kotlin.RequiresOptIn",
+                    "-opt-in=kotlin.ExperimentalStdlibApi"
+                )
+            }
         }
     }
-}
-
-fun CommonExtension<*, *, *, *>.kotlinOptions(block: KotlinJvmOptions.() -> Unit) {
-    (this as ExtensionAware).extensions.configure("kotlinOptions", block)
 }

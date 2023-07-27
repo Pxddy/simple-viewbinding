@@ -4,11 +4,6 @@ plugins {
 
 group = "com.pxddy.simpleviewbinding.buildlogic"
 
-java {
-    toolchain {
-        languageVersion.set(JavaLanguageVersion.of(JavaVersion.VERSION_11.majorVersion))
-    }
-}
 
 dependencies {
     implementation(libs.android.gradlePlugin)

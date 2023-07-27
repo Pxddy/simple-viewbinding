@@ -7,15 +7,5 @@ import org.gradle.kotlin.dsl.configure
 import org.jetbrains.kotlin.gradle.dsl.KotlinAndroidProjectExtension
 
 internal fun Project.configureJvmToolchain() {
-    extensions.configure<JavaPluginExtension> {
-        toolchain {
-            languageVersion.set(Version.Java.languageVersion)
-        }
-    }
 
-    extensions.configure<KotlinAndroidProjectExtension> {
-        jvmToolchain {
-            languageVersion.set(Version.Java.languageVersion)
-        }
-    }
 }
