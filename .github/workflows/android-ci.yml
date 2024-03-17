@@ -33,7 +33,7 @@ jobs:
 
   androidTest:
     name: Android test
-    needs: build-and-test
+    needs: build
     runs-on: ubuntu-latest
     timeout-minutes: 45
 
