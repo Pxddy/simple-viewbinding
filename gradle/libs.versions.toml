@@ -2,7 +2,7 @@
 androidGradlePlugin = "8.7.1"
 androidxActivity = "1.9.3"
 androidxAppCompat = "1.7.0"
-androidxConstraintLayout = "2.1.4"
+androidxConstraintLayout = "2.2.0"
 androidxFragment = "1.8.4"
 androidxNavigation = "2.8.3"
 androidXTestCore = "1.6.1"
