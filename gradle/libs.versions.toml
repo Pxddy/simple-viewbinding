@@ -1,6 +1,6 @@
 [versions]
 androidGradlePlugin = "8.13.2"
-androidxActivity = "1.12.1"
+androidxActivity = "1.12.2"
 androidxAppCompat = "1.7.1"
 androidxConstraintLayout = "2.2.1"
 androidxFragment = "1.8.9"
