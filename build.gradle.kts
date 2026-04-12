@@ -11,7 +11,3 @@ buildscript {
         classpath(libs.kotlin.gradlePlugin)
     }
 }
-
-tasks.register("clean", Delete::class) {
-    delete(rootProject.buildDir)
-}
